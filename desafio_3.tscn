@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqbqtmxmcnjib"]
+
+[ext_resource type="Script" path="res://scripts/desafio_3.gd" id="1_2y13m"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_rndjp"]
+size = Vector3(16, 16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6h6s"]
+font_size = 32
+
+[node name="desafio_3" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(451, 321)
+scale = Vector2(4, 4)
+script = ExtResource("1_2y13m")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
+modulate = Color(0.998753, 0, 1, 1)
+rotation = -1.5708
+mesh = SubResource("PrismMesh_rndjp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+rotation = -1.5708
+polygon = PackedVector2Array(-8, -8, 0, 8, 8, -8)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 63.0
+label_settings = SubResource("LabelSettings_f6h6s")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 94.0
+offset_right = 80.0
+offset_bottom = 139.0
+label_settings = SubResource("LabelSettings_f6h6s")

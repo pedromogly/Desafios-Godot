@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://q3qcrt0xeakd"]
+
+[ext_resource type="Script" path="res://scripts/desafio_2.gd" id="1_l7ivm"]
+
+[node name="desafio_2" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(429, 324)
+script = ExtResource("1_l7ivm")
+
+[node name="Polygon2D" type="Polygon2D" parent="CharacterBody2D"]
+color = Color(0, 0.708214, 0.411027, 1)
+polygon = PackedVector2Array(-41, 16, 1, -71, 42, 14)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(-42, 16, 1, -72, 42, 14)
